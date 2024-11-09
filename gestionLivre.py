@@ -10,7 +10,19 @@ class Book:
         print(f"Auteur                  : {self.author}")
         print(f"Année de publication    : {self.year}")
         print('-'*50)
+
+class Library:
+    def __init__(self):
+        self.books = [] # list of books
     
+    def add_book(self, book):
+        pass
+
+    def remove_book(self, title):
+        pass
+
+    def display_books(self):
+        pass
 
 # creat book instances
 b1 = Book("The relativity","Albert Einstein",1954)
