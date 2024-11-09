@@ -16,6 +16,6 @@ library.add_book(b2)
 
 # display all books in library
 library.display_books()
-library.remove_book("The relativity")
 
-library.display_books()
+# save library to file
+library.save_to_file("library.json")

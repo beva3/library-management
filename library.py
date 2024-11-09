@@ -1,4 +1,5 @@
 from book import Book
+import json as j
 class Library:
     def __init__(self):
         self.books = [] # list of books
@@ -21,3 +22,9 @@ class Library:
         else :
             for b in self.books:
                 b.display_details() 
+    
+    def save_to_file(self, filename):
+        # Save the the library to a file
+        with open(filename,"w") as file:
+            j.dump([book.__dict__ for book in self.books],file,indent=4)
+        print(f"Library saved to {filename}")
