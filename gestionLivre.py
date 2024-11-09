@@ -17,10 +17,14 @@ class Library:
     
     def add_book(self, book):
         self.books.append(book)
+        print(f"Book {book.title} added to the library")
 
     def remove_book(self, title):
-        pass
-
+        for b in self.books:
+            if b.title == title:
+                self.books.remove(b)
+                print(f"Book {b.title} removed from the library")
+        print(f"Book : {title} not found in the library")
     def display_books(self):
         if not self.books:
             print("No books in the library.")
@@ -44,3 +48,4 @@ library.add_book(b2)
 
 # display all books in library
 library.display_books()
+library.remove_book("Beva")
