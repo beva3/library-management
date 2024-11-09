@@ -16,14 +16,31 @@ class Library:
         self.books = [] # list of books
     
     def add_book(self, book):
-        pass
+        self.books.append(book)
 
     def remove_book(self, title):
         pass
 
     def display_books(self):
-        pass
+        if not self.books:
+            print("No books in the library.")
+            return  # No books to display. Return immediately.
+        else :
+            for b in self.books:
+                b.display_details() 
 
 # creat book instances
 b1 = Book("The relativity","Albert Einstein",1954)
-b1.display_details()
+b2 = Book("The Pragmatic Programmer","Andrew Hunt",2000)
+
+# b1.display_details()
+
+#creating Library instances
+library = Library()
+
+# add books to library
+library.add_book(b1)
+library.add_book(b2)
+
+# display all books in library
+library.display_books()
