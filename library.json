@@ -1,12 +1,27 @@
 [
     {
-        "title": "The relativity",
-        "author": "Albert Einstein",
-        "year": 1954
+        "title": "Blablabla",
+        "author": "George Orwell",
+        "year": 1949
     },
     {
-        "title": "The Pragmatic Programmer",
-        "author": "Andrew Hunt",
-        "year": 2000
+        "title": "The Little Prince",
+        "author": "Antoine de Saint-Exup\u00e9ry",
+        "year": 1943
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "year": 1960
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "year": 1925
+    },
+    {
+        "title": "Moby-Dick",
+        "author": "Herman Melville",
+        "year": 1851
     }
 ]

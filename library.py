@@ -28,3 +28,16 @@ class Library:
         with open(filename,"w") as file:
             j.dump([book.__dict__ for book in self.books],file,indent=4)
         print(f"Library saved to {filename}")
+    
+    def load_from_file(self, filename):
+        # load the library from a file
+        try:
+            with open(filename,"r") as file:
+                books_data = j.load(file)
+                self.books = [Book(**book_data) for book_data in books_data]
+                print(f"Library save to {filename}")
+        except FileNotFoundError:
+            print(f"File {filename} not found.")
+        except j.JSONDecodeError:
+            print(f"Error parsing JSON data from file {filename}.")
+
