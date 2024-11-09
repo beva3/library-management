@@ -24,6 +24,7 @@ class Library:
             if b.title == title:
                 self.books.remove(b)
                 print(f"Book {b.title} removed from the library")
+                return  # Book found and removed. Return immediately.
         print(f"Book : {title} not found in the library")
     def display_books(self):
         if not self.books:
@@ -48,4 +49,6 @@ library.add_book(b2)
 
 # display all books in library
 library.display_books()
-library.remove_book("Beva")
+library.remove_book("The relativity")
+
+library.display_books()
